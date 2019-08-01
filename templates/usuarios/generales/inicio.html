@@ -1,0 +1,17 @@
+<title>Inicio</title>
+
+{% extends "./base.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h4>Ya hay una sesión iniciada ({{request.user}})</h4>
+{% else %}
+<h4>Inicie sesión ({{request.user}})</h4>
+{% endif %}
+<br>
+<a href="{% url 'login' %}">Login</a><br>
+<a href="{% url 'logout' %}">Logout</a><br>
+<a href="{% url 'register' %}">Registro</a>
+
+{% endblock %}
