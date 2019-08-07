@@ -7,7 +7,7 @@
 {% if user.is_authenticated %}
 <h4>Ya hay una sesión iniciada cambio H2({{request.user}})</h4>
 {% else %}
-<h4>Inicie sesión ({{request.user}})</h4>
+<h4>Inicie sesión ({{request.user}}) cambio H3</h4>
 {% endif %}
 <br>
 <a href="{% url 'login' %}">Login</a><br>
